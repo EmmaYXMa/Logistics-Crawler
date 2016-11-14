@@ -42,4 +42,4 @@ def get_single_item_data(item_url):
         print item_lease_fee
 #保存至文件夹
 
-lease_spider(1)
+lease_spider(1) #设定爬虫页数
