@@ -37,5 +37,7 @@ def get_single_item_data(item_url):
         #print u"租金：" + (item_lease_fee.string)
         #print item_info_text
         print item_lease_fee
+#保存至文件夹
+
 
 lease_spider(1)
