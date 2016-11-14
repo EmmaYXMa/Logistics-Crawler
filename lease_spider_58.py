@@ -1,8 +1,10 @@
 # -*- coding: UTF-8 -*-  
+import sys
 import requests
 from bs4 import BeautifulSoup
 import re
-
+reload(sys)
+sys.setdefaultencoding('utf8')
 def lease_spider(max_pages):
     page = 1
     while page <= max_pages:
@@ -24,8 +26,10 @@ def get_single_item_data(item_url):
     #plain_text = plain_text.replace(' ','_')    #将空格转化为下划线
     #plain_text = plain_text.replace('\n ','_')    #将空格转化为下划线
     soup = BeautifulSoup(plain_text) 
-    for item_name in soup.findAll('h1', {'style':'font-size:22px;'}):
-        print (item_name.string)
+    for name in soup.findAll('h1', {'style':'font-size:22px;'}):
+        item_name = str(name)
+    f = open('58lease_warehouse_info.txt','a')
+    index = 1
     for item_info in soup.findAll('ul', {'class':'info'}):
         item_info_text = item_info.get_text() 
         item_general_location = re.search(u"区域：.*",item_info_text).group() #获取区域
@@ -33,13 +37,21 @@ def get_single_item_data(item_url):
         item_area = re.search(u"面积：.*",item_info_text).group() #获取面积
         x = re.search(u"租金：.*",item_info_text,re.S) #租金匹配 
         item_lease_fee = x.group() #获取租金
-        print item_general_location
-        print item_specific_location
-        print item_area
+        
+       # print item_general_location
+       # print item_specific_location
+       # print item_area
    # for item_lease_fee in soup.findAll('em', {'class':'redfont'}):
        # print u"租金：" + (item_lease_fee.string)
        # print item_info_text
-        print item_lease_fee
-#保存至文件夹
+       # print item_lease_fee
+    # f = open('58lease_warehouse_info.txt','a')
+        string = str(index) + ',' + item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
+        f.write(string)
+        f.write('\r\n')
+        index = index + 1
+    f.close()
 
-lease_spider(1) #设定爬虫页数
+lease_spider(2) #设定爬虫页数
+
+
