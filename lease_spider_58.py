@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import re
 reload(sys)
 sys.setdefaultencoding('utf8')
+
 def lease_spider(max_pages):
     page = 1
     while page <= max_pages:
@@ -46,12 +47,18 @@ def get_single_item_data(item_url):
        # print item_info_text
        # print item_lease_fee
     # f = open('58lease_warehouse_info.txt','a')
-        string = str(index) + ',' + item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
+        strings = str(index) + ',' + item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
+        s = re.sub('\s','',strings)
+        s1 = re.sub('<h1style="font-size:22px;">','',s)
+        s2 = re.sub ('</h1>', '', s1)
+        string = re.sub (u"轻松买铺，贷来财富", '', s2)
         f.write(string)
         f.write('\r\n')
         index = index + 1
     f.close()
 
-lease_spider(2) #设定爬虫页数
+lease_spider(1) #设定爬虫页数
+
+
 
 
