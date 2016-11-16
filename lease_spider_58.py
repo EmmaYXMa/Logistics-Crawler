@@ -7,7 +7,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 def lease_spider(max_pages):
-    page = 1
+    page = 2
     while page <= max_pages:
         url = 'http://bj.58.com/cangkucf/pn' + str(page)
         source_code = requests.get(url)
@@ -15,11 +15,12 @@ def lease_spider(max_pages):
         soup = BeautifulSoup(plain_text)
         for link in soup.findAll('a',{'class': 't'}):
             href = link.get('href')
-            title = link.string
+            #title = link.string
+        
            # print href
            # print title
             get_single_item_data(href)
-            page += 1
+        page += 1
 
 def get_single_item_data(item_url):
     source_code = requests.get(item_url)
@@ -28,36 +29,45 @@ def get_single_item_data(item_url):
     #plain_text = plain_text.replace('\n ','_')    #将空格转化为下划线
     soup = BeautifulSoup(plain_text) 
     for name in soup.findAll('h1', {'style':'font-size:22px;'}):
-        item_name = str(name)
-    f = open('58lease_warehouse_info.txt','a')
-    index = 1
+        item_name = name.string
+    f = open('58lease_warehouse_info2-70.txt','a')
+    #index = 1
     for item_info in soup.findAll('ul', {'class':'info'}):
         item_info_text = item_info.get_text() 
-        item_general_location = re.search(u"区域：.*",item_info_text).group() #获取区域
-        item_specific_location = re.search(u"地段：.*",item_info_text).group() #获取地段
-        item_area = re.search(u"面积：.*",item_info_text).group() #获取面积
-        x = re.search(u"租金：.*",item_info_text,re.S) #租金匹配 
-        item_lease_fee = x.group() #获取租金
+        igl = re.search(u"区域：.*",item_info_text)
+        if igl:
+            item_general_location = igl.group() #获取区域
+        else:
+            item_general_location = str(None)
+
+        isl = re.search(u"地段：.*",item_info_text)
+        if isl: 
+            item_specific_location = isl.group()
+        else: 
+            item_specific_location = str(None) #获取地段
         
-       # print item_general_location
-       # print item_specific_location
-       # print item_area
-   # for item_lease_fee in soup.findAll('em', {'class':'redfont'}):
-       # print u"租金：" + (item_lease_fee.string)
-       # print item_info_text
-       # print item_lease_fee
-    # f = open('58lease_warehouse_info.txt','a')
-        strings = str(index) + ',' + item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
+        area = re.search(u"面积：.*",item_info_text) #获取面积
+        if area:
+            item_area = area.group()
+        else:
+            item_area = str(None)
+
+        x = re.search(u"租金：.*",item_info_text,re.S) #租金匹配 
+        if x:
+            item_lease_fee = x.group() #获取租金
+        else:
+            item_lease_fee = str(None)
+
+        strings = item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
         s = re.sub('\s','',strings)
-        s1 = re.sub('<h1style="font-size:22px;">','',s)
-        s2 = re.sub ('</h1>', '', s1)
-        string = re.sub (u"轻松买铺，贷来财富", '', s2)
-        f.write(string)
+        string = re.sub (u"轻松买铺，贷来财富", '', s)
+        
+        f.write(string)    #追写
         f.write('\r\n')
-        index = index + 1
+        #index = index + 1
     f.close()
 
-lease_spider(1) #设定爬虫页数
+lease_spider(70) #设定爬虫页数
 
 
 
