@@ -7,7 +7,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 def lease_spider(max_pages):
-    page = 1
+    page = 2
     while page <= max_pages:
         url = 'http://bj.58.com/cangkucf/pn' + str(page)
         source_code = requests.get(url)
@@ -31,18 +31,18 @@ def get_single_item_data(item_url):
     soup = BeautifulSoup(plain_text) 
     for name in soup.findAll('h1', {'style':'font-size:22px;'}):
         item_name = name.string
-    for publish_info in soup.findAll('div',{'class':'other'}):
-        publish_info_text = publish_info.get_text()
+    #for publish_info in soup.findAll('div',{'class':'other'}):
+     #   publish_info_text = publish_info.get_text()
        # publish_time = re.search(u'发表时间：.*',publish_info_text)
        # if publish_time:
         #    time = publish_time.group()
        # else:
         #    time = str(None)
-        print publish_info_text
-    #f = open('58lease_warehouse_info1-2.txt','a')
+       # print publish_info_text
+    f = open('58lease_warehouse_info2-70.txt','a')
     
     #index = 1
-    '''
+    
     for item_info in soup.findAll('ul', {'class':'info'}):
         item_info_text = item_info.get_text() 
         igl = re.search(u"区域：.*",item_info_text)
@@ -69,7 +69,7 @@ def get_single_item_data(item_url):
         else:
             item_lease_fee = str(None)
 
-        strings = publish_time +',' +  item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
+        strings = item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
         s = re.sub('\s','',strings)
         string = re.sub (u"轻松买铺，贷来财富", '', s)
         
@@ -77,9 +77,5 @@ def get_single_item_data(item_url):
         f.write('\r\n')
         #index = index + 1
     f.close()
-    '''
-lease_spider(1) #设定爬虫页数
-
-
-
-
+    
+lease_spider(70) #设定爬虫页数
