@@ -73,9 +73,13 @@ def get_single_item_data(item_url):
         s = re.sub('\s','',strings)
         string = re.sub (u"轻松买铺，贷来财富", '', s)
         
-        f.write(string)    #追写
+        f.write(string)
         f.write('\r\n')
         #index = index + 1
     f.close()
+    
+    h,r,w ={}, file('58lease_warehouse_info2-70.txt'), file('58lease_warehouse_info_after_removral.txt','w')
+    w.write(reduce(lambda x,y:x+y, [i for i in r if h.get(i)==None and h.setdefault(i, True)]))
+#去除重复行
     
 lease_spider(70) #设定爬虫页数
