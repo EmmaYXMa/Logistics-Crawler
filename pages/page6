@@ -1,0 +1,463 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	库搜_北京库房出租_北京库房租赁_北京库房出租网-北京库房信息网
+</title><link href="css/style.css" rel="stylesheet" type="text/css" /><meta name="Author" content="北京库房信息网版权所有" /><meta name="Keywords" content="北京库房,库房,库房出租,北京库房出租,求租库房,求租北京库房" /><meta name="description" content="打造北京专业的工业地产、工业园区招商平台，汇集海量的北京厂房、北京库房和土地出租及求租信息，做北京地区最大的招商平台！" /></head>
+<body style=" background:#fff;">
+<form name="form1" method="post" action="kusou.aspx" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTE0Mjc3MzE4NWRktCmX1UBjD0zV7nsIgFABCmeuS2M=" />
+
+<script language="Javascript">function docheck(el){var r=new RegExp("^\\s*(\\d+)\\s*$");if(r.test(el.value)){if(RegExp.$1<1||RegExp.$1>1770){alert("页数必须介于1和1770之间！");el.select();el.focus();return false;}return true;}alert("输入的页索引无效！");el.select();el.focus();return false;}</script>
+  
+
+
+<div id="head">
+  <div class="logotop">
+    <div class="slat"> <img src="images/slogo.jpg" width="141" height="101" /> </div>
+  </div>
+ 
+<script language="javascript" type="text/javascript" src="/js/function.js"></script>
+<script language="javascript" type="text/javascript">
+//<!--
+function search(){
+if($("header_Search2_1_kufangid").value=="编号"){
+$("header_Search2_1_kufangid").value="";
+}
+if($("header_Search2_1_keyword").value=="请输入关键词"){
+$("header_Search2_1_keyword").value="";
+}
+if($("header_Search2_1_kufangid").value.Trim().length==0){
+if(location.href.toString().indexOf("kusou.aspx")>0 || location.href.toString().indexOf("xq.aspx")>0){
+if($("header_Search2_1_type").selectedIndex>4){
+location.href="xq.aspx?type="+escape($("header_Search2_1_type").value)+"&areaid="+$("header_Search2_1_area").value+"&mianji="+$("header_Search2_1_mianji").value+"&kfclass="+escape($("header_Search2_1_kfclass").value)+"&keyword="+escape($("header_Search2_1_keyword").value);
+}else{
+location.href="kusou.aspx?type="+escape($("header_Search2_1_type").value)+"&areaid="+$("header_Search2_1_area").value+"&mianji="+$("header_Search2_1_mianji").value+"&kfclass="+escape($("header_Search2_1_kfclass").value)+"&keyword="+escape($("header_Search2_1_keyword").value);
+}
+}else{
+if($("header_Search2_1_type").selectedIndex>4){
+window.open("xq.aspx?type="+escape($("header_Search2_1_type").value)+"&areaid="+$("header_Search2_1_area").value+"&mianji="+$("header_Search2_1_mianji").value+"&kfclass="+escape($("header_Search2_1_kfclass").value)+"&keyword="+escape($("header_Search2_1_keyword").value));
+}else{
+window.open("kusou.aspx?type="+escape($("header_Search2_1_type").value)+"&areaid="+$("header_Search2_1_area").value+"&mianji="+$("header_Search2_1_mianji").value+"&kfclass="+escape($("header_Search2_1_kfclass").value)+"&keyword="+escape($("header_Search2_1_keyword").value));
+}
+}
+}else{
+if($("header_Search2_1_kufangid").value.Trim().IsPlusInt(false)){
+if($("header_Search2_1_type").selectedIndex>4){
+window.open("xqShow.aspx?id="+$("header_Search2_1_kufangid").value);
+}else{
+window.open("kufangShow.aspx?id="+$("header_Search2_1_kufangid").value);
+}
+}else{
+alert("编号必须是一个正整数！");
+}
+}
+}
+//-->
+</script>
+<div class="ssearch">
+    <div class="ssearchm"> <span class="sst">搜索:</span> <span class="ft">
+       <select name="header$Search2_1$type" id="header_Search2_1_type">
+	<option value="">选择类型</option>
+	<option value="库房出租">库房出租</option>
+	<option value="库房出售">库房出售</option>
+	<option value="库房租售">库房租售</option>
+	<option value="库房转让">库房转让</option>
+	<option value="库房求租">库房求租</option>
+	<option value="库房求购">库房求购</option>
+	<option value="库房租购">库房租购</option>
+
+</select>
+      <select name="header$Search2_1$area" id="header_Search2_1_area">
+	<option value="1">北京市</option>
+	<option value="2">海淀区</option>
+	<option value="3">朝阳区</option>
+	<option value="4">丰台区</option>
+	<option value="5">昌平区</option>
+	<option value="6">顺义区</option>
+	<option value="7">通州区</option>
+	<option value="8">大兴区</option>
+	<option value="16">亦庄</option>
+	<option value="9">密云区</option>
+	<option value="10">怀柔区</option>
+	<option value="11">房山区</option>
+	<option value="12">延庆区</option>
+	<option value="13">平谷区</option>
+	<option value="14">石景山</option>
+	<option value="15">门头沟</option>
+	<option value="17">宣武区</option>
+
+</select>
+       <select name="header$Search2_1$mianji" id="header_Search2_1_mianji">
+	<option value="">选择面积大小</option>
+	<option value="500">500平米以下</option>
+	<option value="1000">500-1000平米</option>
+	<option value="1500">1000-1500平米</option>
+	<option value="2000">1500-2000平米</option>
+	<option value="2500">2000-2500平米</option>
+	<option value="3000">2500-3000平米</option>
+	<option value="3500">3000-3500平米</option>
+	<option value="4000">3500-4000平米</option>
+	<option value="4500">4000-4500平米</option>
+	<option value="5000">4500-5000平米</option>
+	<option value="5000~">5000平米以上</option>
+
+</select>
+       <select name="header$Search2_1$kfclass" id="header_Search2_1_kfclass">
+	<option value="">选择库房类别</option>
+	<option value="标准库房">标准库房</option>
+	<option value="立体库房">立体库房</option>
+	<option value="冷库">冷库</option>
+	<option value="恒温库">恒温库</option>
+	<option value="危险品库房">危险品库房</option>
+	<option value="保税监管库">保税监管库</option>
+	<option value="厂房">厂房</option>
+
+</select>
+      </span>
+      <span class="sst">&nbsp;关键词&nbsp;:</span>
+      <span class="ft">
+      <input name="header$Search2_1$keyword" type="text" id="header_Search2_1_keyword" size="13" value="请输入关键词" onclick="javascript:if(this.value=='请输入关键词')this.value='';" /></span>
+       <span class="sst">&nbsp; 编号&nbsp;:</span>
+       <span class="ft">
+     <input name="header$Search2_1$kufangid" type="text" id="header_Search2_1_kufangid" size="5" value="编号" onclick="javascript:this.value=''" />
+     <img src="../images/ss_03.gif" width="53" height="20" style="cursor:pointer" onclick="javascript:search();" />
+      </span>
+       </div>
+  </div>
+
+</div>
+
+  <div class="clear"></div>
+  <div id="container">
+<div class="banner" style="margin-top:0px"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="960" height="90">
+            <param name="wmode" value="opaque" />
+            <param name="movie" value="flash/ksunxs29923.swf" />
+            <param name="quality" value="high" />
+            <embed src="flash/ksunxs29923.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="960" height="90"></embed>
+          </object></div>
+<div class="banner">
+        <a href="/kufangShow.aspx?id=19277" target="_blank" ><img src="adimg/sunxs19277.gif" width="960" height="100" border="0" alt="朝阳东五环外1.7万平米库房出租" /></a>
+      </div>
+    <div class="box">
+      <div class="listbk1">
+        <div class="flanbg"> <span class="tit">搜索列表</span> </div>
+
+        <div class="leftbk">
+          <ul>
+            <table id="DataList1" cellspacing="0" border="0" width="100%">
+	<tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl00_Image1" onclick="window.open('kufangShow.aspx?id=29092')" src="/uploads/201603021406121910.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=29092" target="_blank">北京环运通物流库房出租</a></h1>
+                      <i>编号：29092登记时间：2016/7/29</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=29092" target="_blank">北京环运通物流有限公司位于通州区张家湾镇南火垡村工业区556号，距九德路样田路口500米，张采路仅2公里，南六环次渠出口3公里，京津高速于家务出口6公里，交通极其便利。库房面积共2</a></div>
+                    <div class="wz"><i>位置：</i>北京/通州区 <i>面积：</i>20000平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl01_Image1" onclick="window.open('kufangShow.aspx?id=29006')" src="/uploads/201601251020283790.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=29006" target="_blank">顺义区高丽营镇库房出租</a></h1>
+                      <i>编号：29006登记时间：2016/1/25</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=29006" target="_blank">库房位于顺义区高丽营镇文化营村北。距六元桥西仅一公里，交通极其便利，两件独立彩钢房面积有300平方米，高3.6米，面积400平方米，高3.8米。水电齐全，有三相电。价格面议，广告中</a></div>
+                    <div class="wz"><i>位置：</i>北京/顺义区 <i>面积：</i>700平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl02_Image1" onclick="window.open('kufangShow.aspx?id=28138')" src="/uploads/201512170925004460.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=28138" target="_blank">昌平城南占地面积3500平米库房出租</a></h1>
+                      <i>编号：28138登记时间：2016/3/2</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=28138" target="_blank">库房位于昌平城南，紧临京新高速(G7水南路出口)，京藏高速(G6昌平科技园出口或昌平南环出口)两条主要高速，交通便利！运输方便！库房占地面积3500平米，檐高最低6米，最高8米，只</a></div>
+                    <div class="wz"><i>位置：</i>北京/昌平区 <i>面积：</i>3500平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl03_Image1" onclick="window.open('kufangShow.aspx?id=27977')" src="/uploads/201610201456444590.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=27977" target="_blank">三处大型国有库房出租</a></h1>
+                      <i>编号：27977登记时间：2016/10/26</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=27977" target="_blank">(一）马驹桥库房位于马驹桥小杜社村，地处北京东部的交通枢纽距六环路很近，紧临京哈、京沪、京津等多条干线，交通十分便利。该库区为一个独院,内有4500平米高架立体库及200平米办公住</a></div>
+                    <div class="wz"><i>位置：</i>北京/通州区 <i>面积：</i>13700平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl04_Image1" onclick="window.open('kufangShow.aspx?id=27348')" src="/uploads/201511131446202900.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=27348" target="_blank">通州区张家湾镇六环边库房出租</a></h1>
+                      <i>编号：27348登记时间：2016/3/22</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=27348" target="_blank">库房位于通州区张家湾镇，出门就是103国道，地铁八通线土桥站东1000米，东六环土桥出口东100米，地理位置优越，交通便利。库房有两个，库房一面积750平米，高5米，砖混结构；库房</a></div>
+                    <div class="wz"><i>位置：</i>北京/通州区 <i>面积：</i>2870平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl05_Image1" onclick="window.open('kufangShow.aspx?id=27323')" src="/images/nopic.gif" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=27323" target="_blank">通州区张家湾镇厂库房出租</a></h1>
+                      <i>编号：27323登记时间：2015/11/13</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=27323" target="_blank">位于通州张家湾镇张采路京津二高速于家务出口，紧邻东六环，厂房500－20000平米任选，有意者欢迎来电洽谈！中介广告勿扰！</a></div>
+                    <div class="wz"><i>位置：</i>北京/通州区 <i>面积：</i>20000平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl06_Image1" onclick="window.open('kufangShow.aspx?id=27294')" src="/uploads/201511121001427970.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=27294" target="_blank">房山区长阳镇大宁村厂库房出租</a></h1>
+                      <i>编号：27294登记时间：2015/11/12</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=27294" target="_blank">厂库房位于房山区长阳镇大宁村，出门是京深路，距京石高速仅1公里，京港澳高速赵辛店出口东500米，紧邻五环路和地铁房山线稻田站，地理位置优越，交通便利。厂库房独门独院，总面积750平</a></div>
+                    <div class="wz"><i>位置：</i>北京/房山区 <i>面积：</i>750平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl07_Image1" onclick="window.open('kufangShow.aspx?id=27266')" src="/uploads/201511110859165710.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=27266" target="_blank">新华联合库房出租</a></h1>
+                      <i>编号：27266登记时间：2016/9/18</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=27266" target="_blank">新华联合物流中心位于北京市顺义区北小营镇宏大工业园，距北六环15公里，距京承高速22公里，距市中心50公里。总占地面积340亩，总建筑面积20万平方米。园区采用自动传输带，货到人拣</a></div>
+                    <div class="wz"><i>位置：</i>北京/顺义区 <i>面积：</i>200000平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl08_Image1" onclick="window.open('kufangShow.aspx?id=27232')" src="/uploads/201511091811491040.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=27232" target="_blank">海富物流通州36000平米高台库低价出租</a></h1>
+                      <i>编号：27232登记时间：2015/11/9</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=27232" target="_blank">海富物流通州马驹桥镇团瓢庄，紧邻京津高速、京沪高速、六环路。现有36000平米单层高台库低价出租，库房檐高7米，315KVA独立变压器，水电齐全，价钱面议，可注册；园区有办公、住宿</a></div>
+                    <div class="wz"><i>位置：</i>北京/通州区 <i>面积：</i>36000平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl09_Image1" onclick="window.open('kufangShow.aspx?id=27052')" src="/uploads/201511021552435670.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=27052" target="_blank">通州区永乐店镇厂库房出租</a></h1>
+                      <i>编号：27052登记时间：2015/11/2</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=27052" target="_blank">厂房位于通州区永乐店镇大务村616号，距京津高速永路出口4公里，距京沈高速香河或西集出口开车15分钟，京津唐高速廊坊出口开车20分钟，交通极为便利。厂区占地15亩，独门独院，厂房</a></div>
+                    <div class="wz"><i>位置：</i>北京/通州区 <i>面积：</i>3600平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl10_Image1" onclick="window.open('kufangShow.aspx?id=26906')" src="/uploads/201510271336371140.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=26906" target="_blank">朝阳区黑庄户大鲁店库房出租</a></h1>
+                      <i>编号：26906登记时间：2016/11/25</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=26906" target="_blank">库房位于朝阳区黑庄户大鲁店，出门是大鲁店北路，紧邻京沈高速、京津高速和五环路，地理位置优越，交通便利。库房独门独院，库房总面积5000平米，高6米，钢混结构，高台库和平地库都有；厂</a></div>
+                    <div class="wz"><i>位置：</i>北京/朝阳区 <i>面积：</i>5000平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl11_Image1" onclick="window.open('kufangShow.aspx?id=26872')" src="/uploads/201510261400330690.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=26872" target="_blank">房山区琉璃河镇库房出租</a></h1>
+                      <i>编号：26872登记时间：2015/10/26</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=26872" target="_blank">库房位于房山区琉璃河镇祖村小学东院，京石高速琉璃河出口向东2公里，库区占地15亩，库房面积4000平米，房高7米，院内有一座标准四合院，水电齐全，整租，价钱面议，广告中介勿扰，欢迎</a></div>
+                    <div class="wz"><i>位置：</i>北京/房山区 <i>面积：</i>4000平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl12_Image1" onclick="window.open('kufangShow.aspx?id=26802')" src="/uploads/201510221151576190.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=26802" target="_blank">通州区张家湾镇库房出租</a></h1>
+                      <i>编号：26802登记时间：2015/10/22</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=26802" target="_blank">北京通州区张家湾镇东定福庄，紧邻103国道，距京哈高速仅2公里，交通便利，库房面积11000平方米、2000平方米，高8米，整租、分租、托管均可，水电齐全，价钱面议，广告中介勿扰，</a></div>
+                    <div class="wz"><i>位置：</i>北京/通州区 <i>面积：</i>11000平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl13_Image1" onclick="window.open('kufangShow.aspx?id=26773')" src="/uploads/201510211430103980.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=26773" target="_blank">朝阳区黑庄户乡双桥西路库房出租</a></h1>
+                      <i>编号：26773登记时间：2016/12/6</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=26773" target="_blank">库房位于朝阳区黑庄户乡政府西，出门是双桥西路，紧邻京哈高速、京津高速和五环路，地理位置优越，交通便利。库房独门独院，库房总面积15000平米，高6米，砖混结构，厂院宽阔可作为堆场存</a></div>
+                    <div class="wz"><i>位置：</i>北京/朝阳区 <i>面积：</i>1200平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr><tr>
+		<td>
+                <li>
+                  <div class="tpimg">
+                    <img id="DataList1_ctl14_Image1" onclick="window.open('kufangShow.aspx?id=26541')" src="/uploads/201510121803343670.jpg" height="85" width="110" border="0" style="cursor:pointer" />
+                  </div>
+                  <div class="xxtext">
+                    <div class="btnr">
+                      <h1><a href="kufangshow.aspx?id=26541" target="_blank">出租仓库廉价出租(距京开高速仅100米)</a></h1>
+                      <i>编号：26541登记时间：2015/10/12</i></div>
+                    <div class="xx"> <i>简介：</i><a href="kufangshow.aspx?id=26541" target="_blank">交通：京开高速与南六环交叉口，距京开仅100米。东门距离铁路50米。设施：高16米，长168米，宽38米。单层建筑，适应用各种取景搭建，可同时进行不同的运行操作，水电皆通，交通便</a></div>
+                    <div class="wz"><i>位置：</i>北京/大兴区 <i>面积：</i>8200平米</div>
+                  </div>
+                </li>
+              </td>
+	</tr>
+</table>
+          </ul>
+          <div class="clear" style="height:10px;"></div>
+          <div class="sabrosus">
+            <div id="AspNetPager1" class="hui12">
+	<table width=100%><tr><td align='left'><a href="javascript:__doPostBack('AspNetPager1','1')" title="第一页"><font face="webdings" style="font-size:11pt;color:#666666">9</font></a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','5')" title="上一页"><font face="webdings" style="font-size:11pt;color:#666666">3</font></a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','1')" title="第1页" style="font-name:宋体;font-size:12px;color:#666666">[1]</a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','2')" title="第2页" style="font-name:宋体;font-size:12px;color:#666666">[2]</a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','3')" title="第3页" style="font-name:宋体;font-size:12px;color:#666666">[3]</a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','4')" title="第4页" style="font-name:宋体;font-size:12px;color:#666666">[4]</a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','5')" title="第5页" style="font-name:宋体;font-size:12px;color:#666666">[5]</a>&nbsp;<font style=font-name:宋体;font-size:12px;color:red title='第6页'><b>[6]</b></font>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','7')" title="第7页" style="font-name:宋体;font-size:12px;color:#666666">[7]</a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','8')" title="第8页" style="font-name:宋体;font-size:12px;color:#666666">[8]</a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','9')" title="第9页" style="font-name:宋体;font-size:12px;color:#666666">[9]</a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','10')" title="第10页" style="font-name:宋体;font-size:12px;color:#666666">[10]</a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','7')" title="下一页"><font face="webdings" style="font-size:11pt;color:#666666">4</font></a>&nbsp;<a href="javascript:__doPostBack('AspNetPager1','1770')" title="最后一页"><font face="webdings" style="font-size:11pt;color:#666666">:</font></a>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" value="" name="AspNetPager1_input" style="border:1px #000000 solid;text-align:center" /><input type="Submit" value="GO" name="AspNetPager1" onclick="return docheck(document.all['AspNetPager1_input'])" style="border:1px solid #000000;height:20px;width:30px" /></tr></td><td align='right' width='30%'></td></tr></table>
+</div>
+          </div>
+        </div>
+      </div>
+      <div class="sright">
+        <div class="srbk">
+          <div class="srtit"><span class="tit">热点推荐</span></div>
+          <div class="srimg">
+            
+                <dl>
+                  <dt><a href="/dccf/" target="_blank" title="大兴工业开发区内标准厂房出租"> <img border="0" height="80" width="116" src="/adimg/201203151105245710.jpg"  /></a></dt>
+                  <dd><a href="/dccf/" target="_blank" title="大兴工业开发区内标准厂房出租"> 大兴工业开发区</a></dd>
+                </dl>
+              
+          </div>
+        </div>
+        <div class="srbk">
+          <div class="srtit"><span class="tit">最新消息</span></div>
+          <div class="srlist">
+            <ul>
+              
+                  <li><a href='NewShow.aspx?id=238' target="_blank" title='4月25日上午，北京库房信息网客服团队及领导到北京东六元物流参观学习' > 4月25日上午，北京库房信息网 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=236' target="_blank" title='茅台镇里的AB面：成箱飞天茅台堆在库房' > 茅台镇里的AB面：成箱飞天茅台 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=235' target="_blank" title='重庆红岩革命历史博物馆文物库房改造及修复实验室工程全面启动' > 重庆红岩革命历史博物馆文物库房 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=234' target="_blank" title='长治市城区：村里暗藏库房 灌装各类“名酒”' > 长治市城区：村里暗藏库房 灌装 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=233' target="_blank" title='偷21辆电动车高价租仓库存放' > 偷21辆电动车高价租仓库存放 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=232' target="_blank" title='西安一美容美发品库房大火 数十万货物顷刻化乌有' > 西安一美容美发品库房大火 数十 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=231' target="_blank" title='水管爆裂淹了地下库房' > 水管爆裂淹了地下库房 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=230' target="_blank" title='大雪压塌一处钢结构库房 索性没伤到人' > 大雪压塌一处钢结构库房 索性没 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=229' target="_blank" title='“移动小库房”一线受捧' > “移动小库房”一线受捧 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=228' target="_blank" title='库房出租，选择北京库房信息网' > 库房出租，选择北京库房信息网 </a></li>
+                
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="lfoot">
+    <div class="footernav" style="line-height:30px;"><a href="about/aboutus.htm" target="_blank">关于我们</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;&nbsp;<a href="about/contact.htm" target="_blank">联系我们</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;&nbsp;<a href="about/adcj.htm" target="_blank">广告承接</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;<a href="about/link.htm" target="_blank">友情链接</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;&nbsp;<a href="about/mzsm.htm" target="_blank">免责声明</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;&nbsp;<a href="about/zpyc.htm" target="_blank">招聘英才</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;&nbsp;<a href="about/tsjy.htm" target="_blank">投诉建议</a></div>
+    <DIV align=center>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="0" width="920" align="center">
+          <tbody>
+            <tr>
+              <td height="40" width="674" align="right"><table border="0" cellspacing="0" cellpadding="0" width="458">
+                  <tbody>
+                    <tr>
+                      <td align="middle"><div align="center">北京库房信息网 @ 版权所有 北京天创思特科技发展有限公司 　京ICP备08621701号 <br />
+                          服务电话：17001107617　邮箱： <a href="mailto:bj800cf@126.com">bj800cf@126.com</a><br />
+                          二十四小时服务热线：15901478537   京ICP证：090295号<br />
+                        </div>
+                        <!--<script language="javascript" type="text/javascript" src="http://js.users.51.la/2229686.js"></script>  <noscript><a href="http://www.51.la/?2229686" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/2229686.asp" style="border:none" /></a>  </noscript>--></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+              <td valign="top" width="246" align="left"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202009082500010" target="_blank"><img src="../images/biaoshi.gif" alt="" border="0" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+   70160382ef68faa4459bc0b51021e699' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</form>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F70160382ef68faa4459bc0b51021e699' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</body>
+</html>

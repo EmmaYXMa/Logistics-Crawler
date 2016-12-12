@@ -9,7 +9,7 @@ sys.setdefaultencoding('utf8')
 def lease_spider(max_pages):
     page = 2
     while page <= max_pages:
-        url = 'http://ts.58.com/cangkucf/pn' + str(page)
+        url = 'http://cangzhou.58.com/cangkucf/pn' + str(page)
         source_code = requests.get(url)
         plain_text = source_code.text
         soup = BeautifulSoup(plain_text)
@@ -39,7 +39,7 @@ def get_single_item_data(item_url):
        # else:
         #    time = str(None)
        # print publish_info_text
-    f = open('58lease_warehouse_info_ts.txt','a')
+    f = open('58lease_warehouse_info_cangzhou.txt','a')
     
     #index = 1
     
@@ -69,7 +69,7 @@ def get_single_item_data(item_url):
         else:
             item_lease_fee = str(None)
 
-        strings = u"河北" +',' + u"唐山" + ','+ item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
+        strings = u"河北" +',' + u"沧州" + ','+ item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
         s = re.sub('\s','',strings)
         string = re.sub (u"轻松买铺，贷来财富", '', s)
         
@@ -78,7 +78,7 @@ def get_single_item_data(item_url):
         #index = index + 1
     f.close()
     
-    h,r,w ={}, file('58lease_warehouse_info_ts.txt'), file('58lease_warehouse_info_after_removral_ts.txt','w')
+    h,r,w ={}, file('58lease_warehouse_info_cangzhou.txt'), file('58lease_warehouse_info_after_removral_cangzhou.txt','w')
     w.write(reduce(lambda x,y:x+y, [i for i in r if h.get(i)==None and h.setdefault(i, True)]))
 #去除重复行
     

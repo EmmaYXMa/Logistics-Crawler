@@ -69,7 +69,7 @@ def get_single_item_data(item_url):
         else:
             item_lease_fee = str(None)
 
-        strings = item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
+        strings = u"河北" +',' + u"廊坊" + ','+ item_name +',' +item_general_location + ',' + item_specific_location +',' + item_area + ',' + item_lease_fee
         s = re.sub('\s','',strings)
         string = re.sub (u"轻松买铺，贷来财富", '', s)
         

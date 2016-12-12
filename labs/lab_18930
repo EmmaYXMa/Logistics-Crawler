@@ -1,0 +1,354 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1"><title>
+	朝阳区金盏标准库房出租_北京库房出租_北京库房租赁_北京库房出租网-北京库房信息网
+</title><link href="css/style.css" rel="stylesheet" type="text/css" /><meta name="Author" content="北京库房信息网版权所有" /><meta name="Keywords" content="北京库房,库房,库房出租,北京库房出租,求租库房,求租北京库房" /><meta name="description" content="打造北京专业的工业地产、工业园区招商平台，汇集海量的北京厂房、北京库房和土地出租及求租信息，做北京地区最大的招商平台！" /></head>
+<body style=" background:#fff;">
+
+<form name="form1" method="post" action="kufangshow.aspx?id=18930" id="form1" onsubmit="javascript:return chkform(this);">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTM5MjY5Mzk1NmRk+GQYX/gWwhNtFt3Be3ghhZJeJi8=" />
+
+  
+
+
+<div id="head">
+  <div class="logotop">
+    <div class="slat"> <img src="images/slogo.jpg" width="141" height="101" /> </div>
+  </div>
+ 
+<script language="javascript" type="text/javascript" src="/js/function.js"></script>
+<script language="javascript" type="text/javascript">
+//<!--
+function search(){
+if($("Header2_1_Search2_1_kufangid").value=="编号"){
+$("Header2_1_Search2_1_kufangid").value="";
+}
+if($("Header2_1_Search2_1_keyword").value=="请输入关键词"){
+$("Header2_1_Search2_1_keyword").value="";
+}
+if($("Header2_1_Search2_1_kufangid").value.Trim().length==0){
+if(location.href.toString().indexOf("kusou.aspx")>0 || location.href.toString().indexOf("xq.aspx")>0){
+if($("Header2_1_Search2_1_type").selectedIndex>4){
+location.href="xq.aspx?type="+escape($("Header2_1_Search2_1_type").value)+"&areaid="+$("Header2_1_Search2_1_area").value+"&mianji="+$("Header2_1_Search2_1_mianji").value+"&kfclass="+escape($("Header2_1_Search2_1_kfclass").value)+"&keyword="+escape($("Header2_1_Search2_1_keyword").value);
+}else{
+location.href="kusou.aspx?type="+escape($("Header2_1_Search2_1_type").value)+"&areaid="+$("Header2_1_Search2_1_area").value+"&mianji="+$("Header2_1_Search2_1_mianji").value+"&kfclass="+escape($("Header2_1_Search2_1_kfclass").value)+"&keyword="+escape($("Header2_1_Search2_1_keyword").value);
+}
+}else{
+if($("Header2_1_Search2_1_type").selectedIndex>4){
+window.open("xq.aspx?type="+escape($("Header2_1_Search2_1_type").value)+"&areaid="+$("Header2_1_Search2_1_area").value+"&mianji="+$("Header2_1_Search2_1_mianji").value+"&kfclass="+escape($("Header2_1_Search2_1_kfclass").value)+"&keyword="+escape($("Header2_1_Search2_1_keyword").value));
+}else{
+window.open("kusou.aspx?type="+escape($("Header2_1_Search2_1_type").value)+"&areaid="+$("Header2_1_Search2_1_area").value+"&mianji="+$("Header2_1_Search2_1_mianji").value+"&kfclass="+escape($("Header2_1_Search2_1_kfclass").value)+"&keyword="+escape($("Header2_1_Search2_1_keyword").value));
+}
+}
+}else{
+if($("Header2_1_Search2_1_kufangid").value.Trim().IsPlusInt(false)){
+if($("Header2_1_Search2_1_type").selectedIndex>4){
+window.open("xqShow.aspx?id="+$("Header2_1_Search2_1_kufangid").value);
+}else{
+window.open("kufangShow.aspx?id="+$("Header2_1_Search2_1_kufangid").value);
+}
+}else{
+alert("编号必须是一个正整数！");
+}
+}
+}
+//-->
+</script>
+<div class="ssearch">
+    <div class="ssearchm"> <span class="sst">搜索:</span> <span class="ft">
+       <select name="Header2_1$Search2_1$type" id="Header2_1_Search2_1_type">
+	<option value="">选择类型</option>
+	<option value="库房出租">库房出租</option>
+	<option value="库房出售">库房出售</option>
+	<option value="库房租售">库房租售</option>
+	<option value="库房转让">库房转让</option>
+	<option value="库房求租">库房求租</option>
+	<option value="库房求购">库房求购</option>
+	<option value="库房租购">库房租购</option>
+
+</select>
+      <select name="Header2_1$Search2_1$area" id="Header2_1_Search2_1_area">
+	<option value="">选择地区</option>
+	<option value="1">北京市</option>
+	<option value="2">海淀区</option>
+	<option value="3">朝阳区</option>
+	<option value="4">丰台区</option>
+	<option value="5">昌平区</option>
+	<option value="6">顺义区</option>
+	<option value="7">通州区</option>
+	<option value="8">大兴区</option>
+	<option value="16">亦庄</option>
+	<option value="9">密云区</option>
+	<option value="10">怀柔区</option>
+	<option value="11">房山区</option>
+	<option value="12">延庆区</option>
+	<option value="13">平谷区</option>
+	<option value="14">石景山</option>
+	<option value="15">门头沟</option>
+	<option value="17">宣武区</option>
+
+</select>
+       <select name="Header2_1$Search2_1$mianji" id="Header2_1_Search2_1_mianji">
+	<option value="">选择面积大小</option>
+	<option value="500">500平米以下</option>
+	<option value="1000">500-1000平米</option>
+	<option value="1500">1000-1500平米</option>
+	<option value="2000">1500-2000平米</option>
+	<option value="2500">2000-2500平米</option>
+	<option value="3000">2500-3000平米</option>
+	<option value="3500">3000-3500平米</option>
+	<option value="4000">3500-4000平米</option>
+	<option value="4500">4000-4500平米</option>
+	<option value="5000">4500-5000平米</option>
+	<option value="5000~">5000平米以上</option>
+
+</select>
+       <select name="Header2_1$Search2_1$kfclass" id="Header2_1_Search2_1_kfclass">
+	<option value="">选择库房类别</option>
+	<option value="标准库房">标准库房</option>
+	<option value="立体库房">立体库房</option>
+	<option value="冷库">冷库</option>
+	<option value="恒温库">恒温库</option>
+	<option value="危险品库房">危险品库房</option>
+	<option value="保税监管库">保税监管库</option>
+	<option value="厂房">厂房</option>
+
+</select>
+      </span>
+      <span class="sst">&nbsp;关键词&nbsp;:</span>
+      <span class="ft">
+      <input name="Header2_1$Search2_1$keyword" type="text" id="Header2_1_Search2_1_keyword" size="13" value="请输入关键词" onclick="javascript:if(this.value=='请输入关键词')this.value='';" /></span>
+       <span class="sst">&nbsp; 编号&nbsp;:</span>
+       <span class="ft">
+     <input name="Header2_1$Search2_1$kufangid" type="text" id="Header2_1_Search2_1_kufangid" size="5" value="编号" onclick="javascript:this.value=''" />
+     <img src="../images/ss_03.gif" width="53" height="20" style="cursor:pointer" onclick="javascript:search();" />
+      </span>
+       </div>
+  </div>
+
+</div>
+
+  <div class="clear"></div>
+  <div id="container">
+    <div class="box">
+      <div class="flw">
+        <div class="listbk1">
+          <div class="xxbtit"><span class="tit">
+            <span id="Labtitle">朝阳区金盏标准库房出租</span>
+            </span><span class="fbtime">发布日期：
+            <span id="LabaddDate">2015/4/23 0:00:00</span>
+            </span></div>
+          <div class="leftbk">
+            <div class="dc_fl">
+              <ul>
+                <li><span class="lf">信息类型：</span><span class="rf">
+                  <span id="Labtype">库房出租</span>
+                  </span></li>
+                <li><span class="lf">库房类别：</span><span class="rf">
+                  <span id="Labkclass">标准库房</span>
+                  </span></li>
+                <li class="tl"><span class="lf">具体位置：</span><span class="rf">
+                  <span id="LabAddress">朝阳区金盏乡金盏南路钢材市场，出门是金盏南路，临近机场第二高速</span>
+                  </span></li>
+                <li><span class="lf">所属地区：</span><span class="rf">
+                  <span id="Labarea">朝阳区</span>
+                  </span></li>
+                <li><span class="lf">联系人：</span><span class="rf">
+                  <span id="LabContactPeople">王先生</span>
+                  </span></li>
+                <li><span class="lf">联系电话：</span><span class="rf"><b>
+                  <span id="Labtel">13910035818</span>
+                  </b></span></li>
+                <!-- 这儿是非固定信息-->
+                <li><span class="lf">手机：</span><span class="rf"><b>13910035818</b></span></li> <li><span class="lf">可出租面积：</span><span class="rf">2700平米</span></li><li><span class="lf">库房总面积：</span><span class="rf">2700平米</span></li><li><span class="lf">是否独院：</span><span class="rf">是</span></li>
+                <li  class="tl" style="color:#C00;font-size:12px; text-align:center">联系我时就说在北京库房信息网上看到的，谢谢！</li>
+                <li class="tl rbh">编号：
+                  <span id="LabNo">18930</span>
+                </li>
+              </ul>
+            </div>
+            <div class="detail_l"></div>
+            <div class="detail_l"></div>
+            <div class="page"> </div>
+          </div>
+        </div>
+        <div class="listbk1">
+          <div class="flanbg"> <span class="tit">库房介绍</span> </div>
+          <div class="leftbk">
+            <div class="jstextk">
+              厂库房位于朝阳区金盏乡金盏南路钢材市场，出门是金盏南路，临近机场第二高速，交通便利。库房面积2700平米，库房高6.7米，库房前空地面积1800平米，水电齐全，有监控设备和消防栓，价钱面议，广告中介勿扰，欢迎来电洽谈合作。<br>
+            </div>
+          </div>
+        </div>
+        <div class="listbk1">
+          <div class="flanbg"> <span class="tit">图片展示</span> </div>
+          <div class="leftbk">
+            <div class="tpzs">
+              <ul>
+                
+                    <li> <img height="100" onclick="javascript:window.open(this.src)" src='/uploads/201411261432523420.jpg'
+                                    style="cursor: pointer;" width="140" alt="点击查看大图" />
+                      <p><a href="/uploads/201411261432523420.jpg" target="_blank" title="点击查看大图">点击查看大图</a></p>
+                    </li>
+                  
+                    <li> <img height="100" onclick="javascript:window.open(this.src)" src='/uploads/201411261432523601.jpg'
+                                    style="cursor: pointer;" width="140" alt="点击查看大图" />
+                      <p><a href="/uploads/201411261432523601.jpg" target="_blank" title="点击查看大图">点击查看大图</a></p>
+                    </li>
+                  
+                    <li> <img height="100" onclick="javascript:window.open(this.src)" src='/uploads/201411261432523612.jpg'
+                                    style="cursor: pointer;" width="140" alt="点击查看大图" />
+                      <p><a href="/uploads/201411261432523612.jpg" target="_blank" title="点击查看大图">点击查看大图</a></p>
+                    </li>
+                  
+                    <li> <img height="100" onclick="javascript:window.open(this.src)" src='/uploads/201411261432523613.jpg'
+                                    style="cursor: pointer;" width="140" alt="点击查看大图" />
+                      <p><a href="/uploads/201411261432523613.jpg" target="_blank" title="点击查看大图">点击查看大图</a></p>
+                    </li>
+                  
+                    <li> <img height="100" onclick="javascript:window.open(this.src)" src='/uploads/201411261432523614.jpg'
+                                    style="cursor: pointer;" width="140" alt="点击查看大图" />
+                      <p><a href="/uploads/201411261432523614.jpg" target="_blank" title="点击查看大图">点击查看大图</a></p>
+                    </li>
+                  
+                    <li> <img height="100" onclick="javascript:window.open(this.src)" src='/uploads/201411261432523625.jpg'
+                                    style="cursor: pointer;" width="140" alt="点击查看大图" />
+                      <p><a href="/uploads/201411261432523625.jpg" target="_blank" title="点击查看大图">点击查看大图</a></p>
+                    </li>
+                  
+                    <li> <img height="100" onclick="javascript:window.open(this.src)" src='/uploads/201411261432523636.jpg'
+                                    style="cursor: pointer;" width="140" alt="点击查看大图" />
+                      <p><a href="/uploads/201411261432523636.jpg" target="_blank" title="点击查看大图">点击查看大图</a></p>
+                    </li>
+                  
+                    <li> <img height="100" onclick="javascript:window.open(this.src)" src='/uploads/201411261432523637.jpg'
+                                    style="cursor: pointer;" width="140" alt="点击查看大图" />
+                      <p><a href="/uploads/201411261432523637.jpg" target="_blank" title="点击查看大图">点击查看大图</a></p>
+                    </li>
+                  
+                
+              </ul>
+            </div>
+            <div class="page"> </div>
+          </div>
+        </div>
+      </div>
+      <div class="sright">
+        <div style="float:left;width:210px;padding-bottom:7px;"><img src="images/telkf.gif" width="210" height="115" /></div>
+        <!-- <div class="srbk">
+        <div class="srtit"><span class="tit">热点推荐</span></div>
+        <div class="srimg">
+         
+           <dl>
+            <dt><a href="/dccf/" target="_blank" title="大兴工业开发区内标准厂房出租"> <img border="0" height="80" width="116" src="/adimg/201203151105245710.jpg"  /></a></dt>
+            <dd><a href="/dccf/" target="_blank" title="大兴工业开发区内标准厂房出租"> 大兴工业开发区</a></dd>
+          </dl>
+          
+        
+        </div>
+      </div>-->
+        <div class="srbk">
+          <div class="srtit"><span class="tit">最新新闻</span></div>
+          <div class="srlist">
+            <ul>
+              
+                  <li><a href='NewShow.aspx?id=238' target="_blank" title='4月25日上午，北京库房信息网客服团队及领导到北京东六元物流参观学习' > 4月25日上午，北京库房信息 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=236' target="_blank" title='茅台镇里的AB面：成箱飞天茅台堆在库房' > 茅台镇里的AB面：成箱飞天茅 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=235' target="_blank" title='重庆红岩革命历史博物馆文物库房改造及修复实验室工程全面启动' > 重庆红岩革命历史博物馆文物库 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=234' target="_blank" title='长治市城区：村里暗藏库房 灌装各类“名酒”' > 长治市城区：村里暗藏库房 灌 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=233' target="_blank" title='偷21辆电动车高价租仓库存放' > 偷21辆电动车高价租仓库存放 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=232' target="_blank" title='西安一美容美发品库房大火 数十万货物顷刻化乌有' > 西安一美容美发品库房大火 数 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=231' target="_blank" title='水管爆裂淹了地下库房' > 水管爆裂淹了地下库房 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=230' target="_blank" title='大雪压塌一处钢结构库房 索性没伤到人' > 大雪压塌一处钢结构库房 索性 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=229' target="_blank" title='“移动小库房”一线受捧' > “移动小库房”一线受捧 </a></li>
+                
+                  <li><a href='NewShow.aspx?id=228' target="_blank" title='库房出租，选择北京库房信息网' > 库房出租，选择北京库房信息网 </a></li>
+                
+            </ul>
+          </div>
+        </div>
+        <div class="srbk">
+          <div class="srtit"><span class="tit">相关信息</span></div>
+          <div class="srlist1">
+            <ul>
+              
+                  <li> <a href="kufangShow.aspx?id=37028">朝阳东风库房出租－北京库房信</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36982">朝阳双桥库房出租－北京库房信</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36972">朝阳十八里店库房出租－北京库</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36965">朝阳东风库房出租－北京库房信</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36959">朝阳800平米库房出租－北京</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36932">黑庄户附近库房出租－北京库房</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36927">朝阳楼梓庄库房出租－北京库房</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36889">朝阳东坝附近库房出租－北京库</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36879">朝阳黑庄户附近库房出租－北京</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36843">朝阳望京附近库房出租－北京库</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36836">朝阳东风库房出租－北京库房信</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36796">朝阳双桥库房出租－北京库房信</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36756">朝阳小红门库房出租－北京库房</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36751">朝阳房高8米库房出租－北京库</a></li>
+                   
+                  <li> <a href="kufangShow.aspx?id=36721">朝阳楼梓庄库房出租－北京库房</a></li>
+                   
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+  <div class="lfoot">
+    <div class="footernav" style="line-height:30px;"><a href="about/aboutus.htm" target="_blank">关于我们</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;&nbsp;<a href="about/contact.htm" target="_blank">联系我们</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;&nbsp;<a href="about/adcj.htm" target="_blank">广告承接</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;<a href="about/link.htm" target="_blank">友情链接</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;&nbsp;<a href="about/mzsm.htm" target="_blank">免责声明</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;&nbsp;<a href="about/zpyc.htm" target="_blank">招聘英才</a>&nbsp;&nbsp;<span style="color:#cccccc">|</span>&nbsp;&nbsp;<a href="about/tsjy.htm" target="_blank">投诉建议</a></div>
+    <DIV align=center>
+      <div>
+        <table border="0" cellspacing="0" cellpadding="0" width="920" align="center">
+          <tbody>
+            <tr>
+              <td height="40" width="674" align="right"><table border="0" cellspacing="0" cellpadding="0" width="458">
+                  <tbody>
+                    <tr>
+                      <td align="middle"><div align="center">北京库房信息网 @ 版权所有 北京天创思特科技发展有限公司 　京ICP备08621701号 <br />
+                          服务电话：17001107617　邮箱： <a href="mailto:bj800cf@126.com">bj800cf@126.com</a><br />
+                          二十四小时服务热线：15901478537   京ICP证：090295号<br />
+                        </div>
+                        <!--<script language="javascript" type="text/javascript" src="http://js.users.51.la/2229686.js"></script>  <noscript><a href="http://www.51.la/?2229686" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/2229686.asp" style="border:none" /></a>  </noscript>--></td>
+                    </tr>
+                  </tbody>
+                </table></td>
+              <td valign="top" width="246" align="left"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202009082500010" target="_blank"><img src="../images/biaoshi.gif" alt="" border="0" /></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div></div>
+      <br />
+    </DIV>
+    <div class="clear"></div>
+  </div>
+</form>
+</body>
+
+</html>
